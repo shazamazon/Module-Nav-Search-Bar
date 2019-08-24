@@ -40,6 +40,7 @@ class Navbar extends React.Component {
         <Sidebar />
         <Logo />
         <Searchbar />
+        <div id="nav-left-header-text">BACK TO SCHOOL DEALS!</div>
       </div>
       <div id="nav-container-bottom">
         <Location />
