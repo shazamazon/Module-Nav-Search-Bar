@@ -6,6 +6,7 @@ import Searchbar from './Searchbar.jsx';
 import Location from './Location.jsx';
 import CategoryList from './CategoryList.jsx';
 import Cart from './Cart.jsx';
+import Banner from './bannerTopRight.jsx';
 
 class Navbar extends React.Component {
   constructor() {
@@ -36,13 +37,13 @@ class Navbar extends React.Component {
   render() {
     return (
       <>
-      <div id="nav-container-top">
+      <div id="nav-container-top" key="nav-container-top">
         <Sidebar />
         <Logo />
         <Searchbar />
-        <div id="nav-left-header-text">BACK TO SCHOOL DEALS!</div>
+        <Banner />
       </div>
-      <div id="nav-container-bottom">
+      <div id="nav-container-bottom" key="nav-container-bottom">
         <Location />
         <CategoryList />
         <Cart />
