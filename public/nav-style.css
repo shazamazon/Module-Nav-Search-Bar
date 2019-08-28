@@ -78,7 +78,7 @@
 }
 
 #nav-search-bar {
-  width: 75%;
+  width: 70%;
   min-width: 450px;
   padding: 1px;
   color: white;
@@ -127,8 +127,9 @@
 }
 
 #nav-right-header {
-  width: 100%;
+  width: 420px;
   border: 1px solid white;
+  overflow: hidden;
 }
 
 #nav-right-banner {
