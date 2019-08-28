@@ -11,8 +11,13 @@ db.once('open', () => {
 
 const schema = new mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  searchId: Number,
-  itemName: String
+  Photo: Array,
+  ProductId: Number,
+  ItemName: String,
+  Price: Number,
+  Rating: Number,
+  Category: String,
+  Video: String
 }, {collection: 'items'});
 
 const searchItems = mongoose.model('searchItems', schema);

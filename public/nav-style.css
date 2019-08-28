@@ -1,13 +1,12 @@
+/* Class Components */
+
 .nav-category {
   height: 100%;
   width: 11.11%;
 }
 
-#nav-hamburger-icon {
-  color: white;
-  text-decoration: none;
-  font-size: 1.75em;
-}
+/* Main Body */
+
 
 #nav-body {
   margin: 0;
@@ -18,9 +17,11 @@
   flex-flow: row nowrap;
   background-color: #232F3E;
   height: 56px;
+  width: 100%;
 }
 
 #nav-container-bottom {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   background-color: #232F3E;
@@ -29,15 +30,16 @@
 }
 
 
+/* COMPONENTS */
+
 
 #nav-sidebar {
   display: flex;
-  justify-content: center;
   width: 36px;
   height: 34px;
   margin-top: 7px;
   margin-left: 7px;
-  margin-right: 7px;
+  margin-right: 2px;
   border: 1px solid #666666;
   border-radius: 08%;
 }
@@ -49,36 +51,103 @@
 #nav-sidebar-btn {
   border: none;
   background-color: #232F3E;
+  display: flex;
+  align-content: flex-start;
+  padding: 0;
+  padding-left: 2px;
   height: 34px;
   width: 36px;
   border-radius: 10%;
 }
 
+#nav-hamburger-icon {
+  height: 27px;
+  width: 35px;
+}
+
+#nav-logo-container {
+  width: 155px;
+  padding: 1px;
+  display: flex;
+  justify-content: flex-start;
+}
+
 #nav-main-logo {
-  width: 8%;
-  border: 1px solid white;
-  color: white;
+  width: 140px;
+  padding-top: 5px;
 }
 
 #nav-search-bar {
-  width: 67%;
-  border: 1px solid white;
+  width: 75%;
+  min-width: 450px;
+  padding: 1px;
   color: white;
+  display: flex;
+  align-items: center;
 }
 
-#nav-left-header-text {
-  color: white;
+#nav-search-bar-form {
+  display: flex;
+  height: 35px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+#nav-category-selector {
+  display: block;
+  border: none;
+  background-color: #F3F3F3;
+  border-right: 1px solid #CDCDCD;
+  border-top-left-radius: 7%;
+  border-bottom-left-radius: 7%;
+  margin-left: 16px;
+  color: #6D6D6D;
+  font-size: 10pt;
+  font-weight: 400;
+  width: fit-content;
+}
+
+#nav-search-input {
+  border: none;
+  width: 90%;
+}
+
+#nav-search-icon {
+  height: 21px;
+  width: 21px;
+  padding-top: 3px;
+}
+
+#nav-search-submit {
+  border: none;
+  width: 47px;
+  background-color: #FEBD69;
+  border-radius: 0 4px 4px 0;
+  margin-right: 13px;
+}
+
+#nav-right-header {
+  width: 100%;
+  border: 1px solid white;
+}
+
+#nav-right-banner {
+  width: 400px;
+  height: 39px;
+  padding-top: 9px;
+  padding-left: 11px;
 }
 
 #nav-location {
   flex-flow: row nowrap;
-  width: 7%;
+  width: 213px;
   border: 1px solid white;
   color: white;
 }
 
 #nav-category-list {
-  width: 90%;
+  width: 45%;
+  min-width: 33%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -87,7 +156,7 @@
 }
 
 #nav-cart {
-  width: 5%;
+  width: 810px;
   border: 1px solid white;
   color: white;
 }
