@@ -6,7 +6,7 @@ class Searchbar extends React.Component {
 
     this.state = {
       term: '',
-      category: 'wands',
+      category: 'all',
     };
   }
 
@@ -29,19 +29,22 @@ class Searchbar extends React.Component {
     return (
       <div id="nav-search-bar" key = "nav-search-bar">
         <form id="nav-search-bar-form" key = "nav-search-bar-form">
-          <select name="nav-category-selector" key = "nav-category-selector" form="nav-search-bar-form" onChange={this.onCategoryChange.bind(this)} value={this.state.category}>
-            <option value="wands">Wands</option>
-            <option value="quidditch">Quidditch</option>
-            <option value="spells">Spells</option>
-            <option value="accessories">Accessories</option>
-            <option value="rarities">Rarities</option>
-            <option value="food">Food</option>
-            <option value="furniture">Furniture</option>
-            <option value="lamps">Lamps</option>
-            <option value="lotr">LoTR</option>
+          <select id="nav-category-selector" name="nav-category-selector" key = "nav-category-selector" text={this.state.category} form="nav-search-bar-form" onChange={this.onCategoryChange.bind(this)} value={this.state.category}>
+            <option class="nav-category-option" value="all">All</option>
+            <option class="nav-category-option" value="wands">Wands</option>
+            <option class="nav-category-option" value="quidditch">Quidditch</option>
+            <option class="nav-category-option" value="spells">Spells</option>
+            <option class="nav-category-option" value="accessories">Accessories</option>
+            <option class="nav-category-option" value="rarities">Rarities</option>
+            <option class="nav-category-option" value="food">Food</option>
+            <option class="nav-category-option" value="furniture">Furniture</option>
+            <option class="nav-category-option" value="lamps">Lamps</option>
+            <option class="nav-category-option" value="lotr">LoTR</option>
           </select>
-          <input type="text" key = "nav-search-input" onChange={this.onChange.bind(this)}></input>
-          <input type="submit" value="magnifier" key = "nav-search-submit" onClick={this.onSubmit.bind(this)}></input>
+          <input type="text" key="nav-search-input" id="nav-search-input" onChange={this.onChange.bind(this)}></input>
+          <button type="submit" key="nav-search-submit" id="nav-search-submit" onClick={this.onSubmit.bind(this)}>
+            <img id="nav-search-icon" src="https://nav-search-bar.s3.us-east-2.amazonaws.com/nav-icons/search_final.png"></img>
+          </button>
         </form>
       </div>
     );
