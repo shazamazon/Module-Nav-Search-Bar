@@ -5,7 +5,6 @@
   width: 11.11%;
 }
 
-
 /* Main Body */
 
 
@@ -128,8 +127,9 @@
 }
 
 #nav-right-header {
-  width: 100%;
+  width: 420px;
   border: 1px solid white;
+  overflow: hidden;
 }
 
 #nav-right-banner {
