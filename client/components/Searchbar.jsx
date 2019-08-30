@@ -18,6 +18,7 @@ class Searchbar extends React.Component {
 
   onSubmit(event) {
     event.preventDefault();
+    this.setState({term: ''});
   }
 
   onCategoryChange(event) {
@@ -41,7 +42,7 @@ class Searchbar extends React.Component {
             <option class="nav-category-option" value="lamps">Lamps</option>
             <option class="nav-category-option" value="lotr">LoTR</option>
           </select>
-          <input type="text" key="nav-search-input" id="nav-search-input" onChange={this.onChange.bind(this)}></input>
+          <input type="text" key="nav-search-input" id="nav-search-input" value={this.state.term} onChange={this.onChange.bind(this)}></input>
           <button type="submit" key="nav-search-submit" id="nav-search-submit" onClick={this.onSubmit.bind(this)}>
             <img id="nav-search-icon" src="https://nav-search-bar.s3.us-east-2.amazonaws.com/nav-icons/search_final.png"></img>
           </button>
