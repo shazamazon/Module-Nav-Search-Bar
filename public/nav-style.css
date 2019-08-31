@@ -169,7 +169,6 @@
 
 #nav-right-header {
   width: 420px;
-  border: 1px solid white;
 }
 
 #nav-right-banner {
@@ -187,7 +186,6 @@
 #nav-location {
   display: flex;
   width: 213px;
-  border: 1px solid white;
 }
 
 #nav-location-btn {
@@ -238,7 +236,6 @@
   flex-flow: row nowrap;
   align-items: flex-end;
   justify-content: space-between;
-  border: 1px solid white;
   color: #CCCCCC;
   font-size: 11pt;
 }
@@ -248,7 +245,6 @@
   justify-content: flex-end;
   align-items: flex-end;
   width: 810px;
-  border: 1px solid white;
   color: white;
 }
 
