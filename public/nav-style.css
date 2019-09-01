@@ -63,8 +63,8 @@
 
 #nav-sidebar {
   display: flex;
-  width: 36px;
-  height: 34px;
+  width: 40px;
+  height: 38px;
   margin-top: 7px;
   margin-left: 7px;
   margin-right: 2px;
@@ -82,9 +82,8 @@
   display: flex;
   align-content: flex-start;
   padding: 0;
-  padding-left: 2px;
-  height: 34px;
-  width: 36px;
+  height: 38px;
+  width: 40px;
   border-radius: 10%;
 }
 
@@ -93,12 +92,13 @@
 }
 
 #nav-hamburger-icon {
-  height: 27px;
-  width: 35px;
+  height: 28px;
+  width: 45px;
+  padding-left:1px;
 }
 
 #nav-logo-container {
-  width: 155px;
+  width: 153px;
   padding: 1px;
   display: flex;
   justify-content: flex-start;

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const connectionString = 'mongodb+srv://SeanMcCarthy3223:fecnavbar@fec-nav-bar-vjds2.mongodb.net/test?retryWrites=true&w=majority';
 
-mongoose.connect('mongodb://localhost/nav', {useNewUrlParser: true});
+mongoose.connect(connectionString, {useNewUrlParser: true});
 
 const db = mongoose.connection;
 
