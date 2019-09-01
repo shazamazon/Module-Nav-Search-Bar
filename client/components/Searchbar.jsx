@@ -7,6 +7,7 @@ class Searchbar extends React.Component {
     this.state = {
       term: '',
       category: 'all',
+      related: []
     };
   }
 
