@@ -130,6 +130,7 @@
   display: block;
   border: none;
   background-color: #F3F3F3;
+  border-radius: 0;
   border-right: 1px solid #CDCDCD;
   border-top-left-radius: 7%;
   border-bottom-left-radius: 7%;
