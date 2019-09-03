@@ -16,7 +16,7 @@ class Navbar extends React.Component {
       products: [],
       categories: [],
       currentCategory: 'all',
-      url: 'http://ec2-18-217-183-33.us-east-2.compute.amazonaws.com/'
+      url: 'http://ec2-18-217-183-33.us-east-2.compute.amazonaws.com'
     };
   }
 
