@@ -9,7 +9,9 @@
   },
   "scripts": {
     "react-dev": "webpack --watch",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "nodemon server/index.js",
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -28,6 +30,7 @@
     "babel": "^6.23.0",
     "babel-loader": "^8.0.6",
     "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
+    "pm2": "^3.5.1",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
   }
