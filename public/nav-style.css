@@ -132,8 +132,8 @@
   background-color: #F3F3F3;
   border-radius: 0;
   border-right: 1px solid #CDCDCD;
-  border-top-left-radius: 7%;
-  border-bottom-left-radius: 7%;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
   margin-left: 16px;
   color: #6D6D6D;
   font-size: 10pt;
@@ -141,7 +141,7 @@
   width: fit-content;
 }
 
-#nav-category-selector {
+#nav-category-selector:hover {
   cursor: pointer;
 }
 
