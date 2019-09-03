@@ -15,7 +15,8 @@ class Navbar extends React.Component {
     this.state = {
       products: [],
       categories: [],
-      currentCategory: 'all'
+      currentCategory: 'all',
+      url: 'http://ec2-18-217-183-33.us-east-2.compute.amazonaws.com'
     };
   }
 
@@ -24,7 +25,7 @@ class Navbar extends React.Component {
   }
 
   getAllProducts() {
-    axios.get('/api/search/items')
+    axios.get(`${this.state.url}/api/search/items`)
       .then(res=> {
         const products = res.data;
         this.setState({ products });
