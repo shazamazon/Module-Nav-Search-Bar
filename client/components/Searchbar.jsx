@@ -1,4 +1,5 @@
 import React from 'react';
+import ResultList from './ResultList.jsx';
 
 class Searchbar extends React.Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class Searchbar extends React.Component {
     this.state = {
       term: '',
       category: 'all',
-      related: []
+      results: []
     };
   }
 
@@ -36,7 +37,10 @@ class Searchbar extends React.Component {
               return <option className="nav-category-option" value={cat}>{cat}</option>;
             })}
           </select>
-          <input type="text" key="nav-search-input" id="nav-search-input" value={this.state.term} onChange={this.onChange.bind(this)}></input>
+          <div id="nav-search-input">
+            <input type="text" key="nav-search-input" value={this.state.term} id="nav-search-text" onChange={this.onChange.bind(this)}></input>
+            <ResultList results={this.state.results}/>
+          </div>
           <button type="submit" key="nav-search-submit" id="nav-search-submit" onClick={this.onSubmit.bind(this)}>
             <img id="nav-search-icon" src="https://nav-search-bar.s3.us-east-2.amazonaws.com/nav-icons/search_final.png"></img>
           </button>
