@@ -14,7 +14,7 @@ class Navbar extends React.Component {
 
     this.state = {
       products: [],
-      categories: [],
+      categories: ['All', 'Wands', 'Quidditch', 'Spells', 'Accessories', 'Rarities', 'Food', 'Furniture', 'Lamps', 'Lotr'],
       currentCategory: 'all',
       url: 'http://ec2-18-217-183-33.us-east-2.compute.amazonaws.com'
     };
@@ -41,7 +41,7 @@ class Navbar extends React.Component {
       <div id="nav-container-top" key="nav-container-top">
         <Sidebar />
         <Logo />
-        <Searchbar />
+        <Searchbar categories={this.state.categories}/>
         <Banner />
       </div>
       <div id="nav-container-bottom" key="nav-container-bottom">
