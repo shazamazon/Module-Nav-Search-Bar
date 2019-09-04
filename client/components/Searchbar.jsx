@@ -32,16 +32,9 @@ class Searchbar extends React.Component {
       <div id="nav-search-bar" key = "nav-search-bar">
         <form id="nav-search-bar-form" key = "nav-search-bar-form">
           <select id="nav-category-selector" name="nav-category-selector" key = "nav-category-selector" text={this.state.category} form="nav-search-bar-form" onChange={this.onCategoryChange.bind(this)} value={this.state.category}>
-            <option class="nav-category-option" value="all">All</option>
-            <option class="nav-category-option" value="wands">Wands</option>
-            <option class="nav-category-option" value="quidditch">Quidditch</option>
-            <option class="nav-category-option" value="spells">Spells</option>
-            <option class="nav-category-option" value="accessories">Accessories</option>
-            <option class="nav-category-option" value="rarities">Rarities</option>
-            <option class="nav-category-option" value="food">Food</option>
-            <option class="nav-category-option" value="furniture">Furniture</option>
-            <option class="nav-category-option" value="lamps">Lamps</option>
-            <option class="nav-category-option" value="lotr">LoTR</option>
+            {this.props.categories.map((cat) => {
+              return <option className="nav-category-option" value={cat}>{cat}</option>;
+            })}
           </select>
           <input type="text" key="nav-search-input" id="nav-search-input" value={this.state.term} onChange={this.onChange.bind(this)}></input>
           <button type="submit" key="nav-search-submit" id="nav-search-submit" onClick={this.onSubmit.bind(this)}>
