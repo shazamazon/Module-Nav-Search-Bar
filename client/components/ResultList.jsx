@@ -1,13 +1,12 @@
 import React from 'react';
 
 const ResultList = (props) => {
-  return(
+  return (
     <div id="nav-result-list-container">
       <ul id='nav-result-list'>
-        <li className='nav-search-result'>Result 1</li>
-        <li className='nav-search-result'>Result 2</li>
-        <li className='nav-search-result'>Result 3</li>
-        <li className='nav-search-result'>Result 4</li>
+        {props.results.map((result) => {
+          return <li className='nav-search-result'>{result.ItemName}</li>;
+        })}
       </ul>
     </div>
   );

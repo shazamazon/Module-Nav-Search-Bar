@@ -28,6 +28,28 @@ app.get('/api/search/items', (req, res) => {
     });
 });
 
+app.get('/api/search/matches', (req, res) => {
+  searchItems.find({ItemName: {$regex: req.query.regex, $options: 'gi'}})
+    .exec()
+    .then(products => {
+      res.send(products);
+    })
+    .catch(err => {
+      console.error(err);
+    });
+});
+
+app.get('/api/search/matches/category', (req, res) => {
+  searchItems.find({ItemName: {'$regex': req.query.regex, '$options': 'gi'}, Category: req.query.category})
+    .exec()
+    .then(products => {
+      res.send(products);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
 //SERVER START
 
 app.listen(3003, () => {

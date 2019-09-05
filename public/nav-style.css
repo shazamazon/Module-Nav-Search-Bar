@@ -27,7 +27,7 @@
 
 .nav-cart-buttons:hover {
   cursor: pointer;
-  border: 1px solid rgb(223, 223, 223);
+  border: 1px solid #666666;
 }
 
 .nav-search-result {
@@ -135,7 +135,9 @@
   z-index: 100;
   color: black;
   background-color: white;
+  max-height: 400px;
   width: 99.85%;
+  overflow-y: scroll;
   border: 1px solid #BBBBBB;
 }
 
@@ -228,6 +230,7 @@
   border: 1px solid #232F3E;
   margin: none;
   margin-left: 6px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: flex-start;
   background-color: #232F3E;

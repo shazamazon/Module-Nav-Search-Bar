@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connectionString = 'mongodb+srv://SeanMcCarthy3223:fecnavbar@fec-nav-bar-vjds2.mongodb.net/test?retryWrites=true&w=majority';
+const connectionString = 'mongodb+srv://SeanMcCarthy3223:fecnavbar@FEC-Nav-Bar-vjds2.mongodb.net/fec-nav-bar?retryWrites=true&w=majority';
 
 mongoose.connect(connectionString, {useNewUrlParser: true});
 
@@ -19,7 +19,7 @@ const schema = new mongoose.Schema({
   Rating: Number,
   Category: String,
   Video: String
-}, {collection: 'items'});
+}, {collection: 'fec-products'});
 
 const searchItems = mongoose.model('searchItems', schema);
 
