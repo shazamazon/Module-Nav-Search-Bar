@@ -1,4 +1,6 @@
 import React from 'react';
+import ResultList from './ResultList.jsx';
+import axios from 'axios';
 
 class Searchbar extends React.Component {
   constructor(props) {
@@ -6,11 +8,39 @@ class Searchbar extends React.Component {
 
     this.state = {
       term: '',
-      category: 'all',
-      related: []
+      category: 'All',
+      results: []
     };
   }
 
+  componentDidMount() {
+    setInterval(this.showResults.bind(this), 500);
+  }
+
+  showResults(results) {
+    if (this.state.term === '') {
+      this.setState({results: []});
+    } else if (this.state.category === 'All') {
+      const searchRegex = this.state.term;
+      axios.get(`${this.props.url}/api/search/matches`, {params: {regex: searchRegex}})
+        .then(res => {
+          this.setState({results: res.data});
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    } else {
+      const searchRegex = this.state.term;
+      const cat = this.state.category.toLowerCase();
+      axios.get(`${this.props.url}/api/search/matches/category`, {params: {regex: searchRegex, category: cat}})
+        .then(res => {
+          this.setState({results: res.data});
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    }
+  }
 
   onChange(event) {
     const term = event.target.value;
@@ -36,7 +66,10 @@ class Searchbar extends React.Component {
               return <option className="nav-category-option" value={cat}>{cat}</option>;
             })}
           </select>
-          <input type="text" key="nav-search-input" id="nav-search-input" value={this.state.term} onChange={this.onChange.bind(this)}></input>
+          <div id="nav-search-input">
+            <input type="text" key="nav-search-input" value={this.state.term} id="nav-search-text" onChange={this.onChange.bind(this)}></input>
+            {this.state.results.length > 0 ? <ResultList results={this.state.results}/> : null}
+          </div>
           <button type="submit" key="nav-search-submit" id="nav-search-submit" onClick={this.onSubmit.bind(this)}>
             <img id="nav-search-icon" src="https://nav-search-bar.s3.us-east-2.amazonaws.com/nav-icons/search_final.png"></img>
           </button>
@@ -47,3 +80,5 @@ class Searchbar extends React.Component {
 }
 
 export default Searchbar;
+
+// 'Result 1', 'Long Result Test to See how this dropdown will handle the ridiculously long titles that plague my database. . . I don\'t know what else to say but I am still typing l0l', 'result 3', 'RESULT 4', 'Random text here'
