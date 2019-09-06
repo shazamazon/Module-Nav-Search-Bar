@@ -16,7 +16,7 @@ class Cart extends React.Component {
           <img id="nav-language-icon" src="https://nav-search-bar.s3.us-east-2.amazonaws.com/nav-icons/global_final.png"></img>
         </div>
         <div id="nav-account-lists" class="nav-cart-buttons">
-          <p id="nav-account-hello">Hello, Sean</p>
+          <p id="nav-account-hello">Hello, Zubair</p>
           <p id="nav-account-dropdown" class="nav-cart-larger-text">Account & Lists</p>
         </div>
         <div id="nav-cart-orders" class="nav-cart-larger-text nav-cart-buttons">Orders</div>
