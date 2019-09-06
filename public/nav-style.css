@@ -53,6 +53,7 @@
   background-color: #232F3E;
   height: 56px;
   width: 100%;
+  min-width: 100vw;
 }
 
 #nav-container-bottom {
@@ -62,6 +63,7 @@
   background-color: #232F3E;
   height: 45px;
   border-bottom: 1px solid #D4D4D4;
+  min-width: 100vw;
 }
 
 
