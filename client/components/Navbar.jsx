@@ -54,3 +54,5 @@ class Navbar extends React.Component {
 }
 
 export default Navbar;
+
+//http://ec2-18-217-183-33.us-east-2.compute.amazonaws.com
