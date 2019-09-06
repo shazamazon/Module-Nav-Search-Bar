@@ -6,7 +6,7 @@ const ResultList = (props) => {
     <div id="nav-result-list-container">
       <ul id='nav-result-list'>
         {props.results.map((result) => {
-          return (<SearchResult result={result}/>);
+          return (<SearchResult result={result} onSubmit={props.onSubmit}/>);
         })}
       </ul>
     </div>

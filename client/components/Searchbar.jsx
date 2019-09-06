@@ -68,7 +68,7 @@ class Searchbar extends React.Component {
           </select>
           <div id="nav-search-input">
             <input type="text" key="nav-search-input" value={this.state.term} id="nav-search-text" onChange={this.onChange.bind(this)}></input>
-            {this.state.results.length > 0 ? <ResultList results={this.state.results}/> : null}
+            {this.state.results.length > 0 ? <ResultList results={this.state.results} onSubmit={this.onSubmit.bind(this)}/> : null}
           </div>
           <button type="submit" key="nav-search-submit" id="nav-search-submit" onClick={this.onSubmit.bind(this)}>
             <img id="nav-search-icon" src="https://nav-search-bar.s3.us-east-2.amazonaws.com/nav-icons/search_final.png"></img>
@@ -80,5 +80,3 @@ class Searchbar extends React.Component {
 }
 
 export default Searchbar;
-
-// 'Result 1', 'Long Result Test to See how this dropdown will handle the ridiculously long titles that plague my database. . . I don\'t know what else to say but I am still typing l0l', 'result 3', 'RESULT 4', 'Random text here'
