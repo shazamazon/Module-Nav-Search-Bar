@@ -17,7 +17,7 @@ class Searchbar extends React.Component {
     setInterval(this.showResults.bind(this), 500);
   }
 
-  showResults(results) {
+  showResults() {
     if (this.state.term === '') {
       this.setState({results: []});
     } else if (this.state.category === 'All') {
@@ -34,7 +34,7 @@ class Searchbar extends React.Component {
       const cat = this.state.category.toLowerCase();
       axios.get(`${this.props.url}/api/search/matches/category`, {params: {regex: searchRegex, category: cat}})
         .then(res => {
-          this.setState({results: res});
+          this.setState({results: res.data});
         })
         .catch(err => {
           console.error(err);
