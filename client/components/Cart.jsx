@@ -4,9 +4,19 @@ class Cart extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      numberInCart: 0
+    };
   }
 
+  componentDidMount() {
+    window.addEventListener('addToCart', (event) => { onAddToCart(); });
+  }
+
+  onAddToCart() {
+    const newNum = this.state.numberInCart + 1;
+    this.setState({numberInCart: newNum});
+  }
 
   render() {
     return (
@@ -23,7 +33,15 @@ class Cart extends React.Component {
         <div id="nav-cart-prime" class="nav-cart-larger-text nav-cart-buttons">Try Prime</div>
         <div id="nav-cart" class="nav-cart-buttons">
           <img id="nav-cart-icon" src="https://nav-search-bar.s3.us-east-2.amazonaws.com/nav-icons/cart_final.png"></img>
-          <p id="nav-cart-text" class="nav-cart-larger-text">Cart</p>
+          {this.state.numberInCart <= 9 ?
+            <div>
+              <span id="nav-cart-icon-overlay">{this.state.numberInCart}</span>
+              <p id="nav-cart-text" class="nav-cart-larger-text">Cart</p>
+            </div> :
+            <div>
+              <span id="nav-cart-icon-overlay-double-digit">{this.state.numberInCart}</span>
+              <p id="nav-cart-text-double-digit" class="nav-cart-larger-text">Cart</p>
+            </div>}
         </div>
       </div>
     );
