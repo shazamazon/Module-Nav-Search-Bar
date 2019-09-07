@@ -10,11 +10,10 @@ class Cart extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('addToCart', (event) => { this.onAddToCart(event); });
+    window.addEventListener('addToCart', () => { this.onAddToCart(); });
   }
 
-  onAddToCart(event) {
-    console.log(event);
+  onAddToCart() {
     const newNum = this.state.numberInCart + 1;
     this.setState({numberInCart: newNum});
   }
