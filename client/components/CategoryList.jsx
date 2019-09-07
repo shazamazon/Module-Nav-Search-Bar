@@ -12,7 +12,7 @@ const CategoryList = (props) => {
       <Category name="Food"/>
       <Category name="Furniture"/>
       <Category name="Lamps"/>
-      <Category name="Lord of The Rings"/>
+      <Category name="Lotr"/>
     </div>
   );
 };
