@@ -10,7 +10,7 @@ class Cart extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('addToCart', (event) => { onAddToCart(event); });
+    window.addEventListener('addToCart', (event) => { this.onAddToCart(event); });
   }
 
   onAddToCart(event) {
