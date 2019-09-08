@@ -15,7 +15,7 @@ class Navbar extends React.Component {
     this.state = {
       products: [],
       categories: ['All', 'Wands', 'Quidditch', 'Spells', 'Accessories', 'Rarities', 'Food', 'Furniture', 'Lamps', 'Lotr'],
-      url: 'http://ec2-18-217-183-33.us-east-2.compute.amazonaws.com'
+      url: ''
     };
   }
 
@@ -54,3 +54,5 @@ class Navbar extends React.Component {
 }
 
 export default Navbar;
+
+// http://ec2-18-217-183-33.us-east-2.compute.amazonaws.com
