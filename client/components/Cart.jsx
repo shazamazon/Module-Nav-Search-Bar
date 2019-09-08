@@ -14,7 +14,7 @@ class Cart extends React.Component {
   }
 
   onAddToCart(event) {
-    const newNum = this.state.numberInCart + event.detail;
+    const newNum = this.state.numberInCart + Number(event.detail);
     this.setState({numberInCart: newNum});
   }
 
