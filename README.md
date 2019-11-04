@@ -10,7 +10,11 @@ In addition to the navigation and search bar, I also developed this proxy to bri
 
 ### Video Demo
 
-[![](http://img.youtube.com/vi/jEG-kVc52FE/0.jpg)](http://www.youtube.com/watch?v=jEG-kVc52FE "")
+Part 1
+![demo part 1](shazamazon-part1.gif)
+
+Part 2
+![demo part 2](shazamazon-part2.gif)
 
 ### Contributors
 
