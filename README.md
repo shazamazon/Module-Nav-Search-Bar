@@ -1,4 +1,4 @@
-# Shazamazon Proxy and Cart Functionality
+# Shazamazon Proxy and Navigation Functionality
 
 ### About
 
@@ -10,7 +10,7 @@ In addition to the navigation and search bar, I also developed this proxy to bri
 
 ### Video Demo
 
-[![Alt text](https://img.youtube.com/vi/jEG-kVc52FE/0.jpg)](https://www.youtube.com/watch?v=jEG-kVc52FE)
+[![](http://img.youtube.com/vi/jEG-kVc52FE/0.jpg)](http://www.youtube.com/watch?v=jEG-kVc52FE "")
 
 ### Contributors
 
