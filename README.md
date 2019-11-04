@@ -8,6 +8,10 @@ It was built as part of a <a href="https://github.com/shazamazon">e-commerce pro
 
 In addition to the navigation and search bar, I also developed this proxy to bring all the distributed microservices together, whose developers you can see below.
 
+### Video Demo
+
+[![Alt text](https://img.youtube.com/vi/jEG-kVc52FE/0.jpg)](https://www.youtube.com/watch?v=jEG-kVc52FE)
+
 ### Contributors
 
 Cart service and proxy developed by <a href="https://github.com/jkcryptolock">jkcryptolock</a>, other components to the full e-commerce site devloped by:
