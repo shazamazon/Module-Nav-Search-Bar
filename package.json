@@ -31,6 +31,6 @@
     "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
     "pm2": "^3.5.1",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.12"
   }
 }
